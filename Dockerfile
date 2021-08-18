@@ -9,9 +9,9 @@ ENV RDF_EXTENSION_URL https://github.com/stkenny/grefine-rdf-extension/releases/
 
 WORKDIR /app
 
-RUN apk add --no-cache bash curl jq tar unzip
-
-RUN echo "Download OpenRefine..." && \
+RUN set -xe && \
+    apk add --no-cache bash curl jq tar unzip && \
+    echo "Download OpenRefine..." && \
     curl -sSL ${OPENREFINE_URL} | tar xz --strip 1 && \
     echo "Download OpenRefine RDF extension..." && \
     cd webapp/extensions && mkdir rdf-extension && \
