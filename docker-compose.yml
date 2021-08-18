@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  openrefine:
+    container_name: openrefine
+    hostname: openrefine
+    build: .
+    ports:
+      - "3333:3333"
