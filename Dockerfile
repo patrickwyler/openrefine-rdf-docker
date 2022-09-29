@@ -1,4 +1,4 @@
-FROM java:8-jre-alpine
+FROM adoptopenjdk/openjdk11:alpine-jre
 
 ENV OPENREFINE_VERSION 3.6.1
 ENV RDF_EXTENSION_VERSION 1.4.0
